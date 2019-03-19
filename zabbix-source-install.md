@@ -145,6 +145,9 @@ DocumentRoot "/var/www/html/zabbix"
 ServerName 127.0.0.1
 DirectoryIndex index.html index.html.var index.php
 ```
+![iage64](https://github.com/now521/zabbix_picture/blob/master/64.png)
+![image65](https://github.com/now521/zabbix_picture/blob/master/65.png)
+![image66](https://github.com/now521/zabbix_picture/blob/master/66.png)
 设置web前端<br>
 ```
 mkdir /var/www/html/zabbix
