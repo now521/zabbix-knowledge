@@ -186,6 +186,8 @@ yum install java* -y#在装java*的时候，我看到要安装1个多G的东西�
 ```
 （6）configure: error: Curl library not found
 yum install curl-devel -y
+（7）configure: error: SSH2 library not found
+yum install -y libssh2-devel
 ```
 以上是在编译的过程中可能会报错的信息及解决方法，当然也可能还有其它报错这里没列举出来，有问题找度娘，没毛病！<br>
 编译成功会出现************************************************************            Now run 'make install'                       **                                                         **            Thank you for using Zabbix!                  **              <http://www.zabbix.com>                    ************************************************************
