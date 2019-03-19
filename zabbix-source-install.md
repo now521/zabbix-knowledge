@@ -97,14 +97,14 @@ chkconfig --add mysql
 ```
 2、设置mysql服务为自动<br>
 ```
-chkconfig mysql on <br>
+chkconfig mysql on
 ```
 3、重启查看进程<br>
 ```
 ps -ef|grep mysql
 ```
-### 第八步：配置环境变量<br>
-为了方便操作，配置环境变量还是有必要的。<br>
+### 第八步：配置环境变量
+为了方便操作，配置环境变量还是有必要的。
 ```
 vi /etc/profile
 export PATH=$JAVA_HOME/bin:/usr/local/mysql/bin:$PATH
@@ -119,10 +119,10 @@ tar -zxvf zabbix-4.0.4.tar.gz
 ```
 yum install mysql-devel unixODBC-devel net-snmp-devel libssh2-devel openldap openldap-devel OpenIPMI* libpcre* -y
 ```
-### 2 安装php5.6和Apache服务<br>
+### 2 安装php5.6和Apache服务
 补充说明：<br>
 今天我测试了一下下面安装的php56 yum源(rpm 安装的latest.rpm)，有点问题，我看了生成的三个repo文件，里面的mirrolist都是https的，于是我进浏览器测试访问，结果访问失败，故我把三个repo文件里面的https全部替换为http，再次测试就成功了。yum源也可以正常访问。若是有出现此类情况的网友可以参照这种方法解决。<br> 
-获取yum源<br>
+获取yum源
 ```
 rpm -ivh http://repo.webtatic.com/yum/el6/latest.rpm
 ```
@@ -132,11 +132,11 @@ yum -y install httpd php56w php56w-gd php56w-mysqlnd php56w-bcmath php56w-mbstri
 ```
 编辑php的ini文件（vim /etc/php.ini）并修改一下内容，注意date.timezone一定要写对，否则在配置完zabbix后，显示的界面全部报错 <br>
 ```
-post_max_size = 16M<br>
-max_execution_time = 300<br>
-max_input_time = 300<br>
-date.timezone = Asia/Shanghai<br>
-always_populate_raw_post_data = -1<br>
+post_max_size = 16M
+max_execution_time = 300
+max_input_time = 300
+date.timezone = Asia/Shanghai
+always_populate_raw_post_data = -1
 ```
 配置/etc/httpd/conf/httpd.conf<br>
 ```
@@ -168,16 +168,16 @@ cd zabbix-4.0.4/
 ```
 可能会出现以下的报错信息，建议直接全部安装
 ```
-yum install gcc* mysql-devel libxml2-devel net-snmp* java* curl-devel libevent-devel -y<br>
-（1）configure: error: in `/zabbix/zabbix-4.0.4':#configure: error: no acceptable C compiler found in $PATH<br>
-yum install gcc* -y<br>
-（2）configure: error: MySQL library not found<br>
-yum install mysql-devel -y<br>
-（3）configure: error: LIBXML2 library not found<br>
-yum install libxml2-devel -y<br>
-（4）configure: error: Invalid Net-SNMP directory - unable to find net-snmp-config<br>
-yum install net-snmp* -y<br>
-（5）configure: error: Unable to find "javac" executable in path<br>
+yum install gcc* mysql-devel libxml2-devel net-snmp* java* curl-devel libevent-devel -y
+（1）configure: error: in `/zabbix/zabbix-4.0.4':#configure: error: no acceptable C compiler found in $PATH
+yum install gcc* -y
+（2）configure: error: MySQL library not found
+yum install mysql-devel -y
+（3）configure: error: LIBXML2 library not found
+yum install libxml2-devel -y
+（4）configure: error: Invalid Net-SNMP directory - unable to find net-snmp-config
+yum install net-snmp* -y
+（5）configure: error: Unable to find "javac" executable in path
 ```
 yum install java* -y#在装java*的时候，我看到要安装1个多G的东西，于是我就改成了javac*，发现后来编译还是出错，所以还是老老实实装java*吧，虽然装的包有点多，但至少能编译成功啊！<br>
 ```
@@ -198,8 +198,8 @@ DBPassword=zabbix
 ```
 ### 6 添加Zabbix服务器和Zabbix代理启动脚本
 ```
-cp zabbix-4.0.4/misc/init.d/fedora/core/zabbix_server /etc/init.d/zabbix_server<br>
-cp zabbix-4.0.4/misc/init.d/fedora/core/zabbix_agentd /etc/init.d/zabbix_agentd<br><br>
+cp zabbix-4.0.4/misc/init.d/fedora/core/zabbix_server /etc/init.d/zabbix_server
+cp zabbix-4.0.4/misc/init.d/fedora/core/zabbix_agentd /etc/init.d/zabbix_agentd
 ```
 修改 /etc/init.d/zabbix_server /etc/init.d/zabbix_agentd的BASEDIR=/usr/local/为BASEDIR=/usr/local/zabbix<br>
 sed -i 's#BASEDIR=/usr/local/#BASEDIR=/usr/local/zabbix#g' /etc/init.d/zabbix_{server,agentd}<br>
@@ -374,13 +374,15 @@ mysql>show tables;
 mysql>\q
 
 ```
-### 8 启动所有服务，并设置开机自启<br>
+### 8 启动所有服务，并设置开机自启
 启动Apache服务<br>
 service httpd start<br>
-启用mysql服务<br>
-service mysqld start<br>
-/etc/init.d/zabbix_server start<br>
-/etc/init.d/zabbix_agentd start<br>
+启用mysql服务
+```
+service mysqld start
+/etc/init.d/zabbix_server start
+/etc/init.d/zabbix_agentd start
+```
 设置开机自启<br>
 ```
 chkconfig httpd on
@@ -390,13 +392,13 @@ chkconfig --add /etc/init.d/zabbix_agentd
 chkconfig zabbix_server on
 chkconfig zabbix_agentd on
 ```
-查看端口号80、3306、10050（zabbix_agentd）、10051（zabbix_server）是否监听<br>
+查看端口号80、3306、10050（zabbix_agentd）、10051（zabbix_server）是否监听
 ```
 ss -tnul
 ```
-### 9 在所有其他服务器上都部署上zabbix<br>
-操作同上面安装zabbix一致<br>
-### 10 浏览器访问zabbix页面并进行初始化<br>
+### 9 在所有其他服务器上都部署上zabbix
+操作同上面安装zabbix一致
+### 10 浏览器访问zabbix页面并进行初始化
 ### 11 登陆zabbix安装界面<br>
 ![image46](https://github.com/now521/zabbix_picture/blob/master/46.png)<br>
 ### 12 进入下一步<br>
