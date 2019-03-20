@@ -20,9 +20,10 @@ CPU过载时讲一个虚拟机迁移到另外一台物理服务器
 
 ## 配置
 首先我们需要在zabbix客户配置文件开启对远程命令的支持，编辑zabbix_agentd.conf，修改
-
+```
 EnableRemoteCommands = 1
 EnableRemoteCommands = 1
+```
 重启客户端
 
 备注：Aive zabbix不支持远程命令
@@ -35,10 +36,10 @@ EnableRemoteCommands = 1
 选择远程命令类型(IPMI, Custom script, SSH, Telnet, Global script)
 写上远程命令
 示例:
-
+```
 sudo /etc/init.d/apache restart
-1
 sudo /etc/init.d/apache restart
+```
 上面例子用来在出现状况的情况下重启Apache，务必全包zabbix agent能够执行这个命令.
 
 备注：
@@ -51,22 +52,21 @@ Conditions选项卡定义了什么条件下，这个远程命令会被执行，�
 ## 访问权限
 确保你的zabbix用户有执行权限，如果某些命令需要root权限，那么请使用sudo
 
-# visudo
+#visudo
 
-# visudo
+#visudo
 编辑sudoer文件，zabbix用户便可以执行Apache restart命令了
-
-# allows 'zabbix' user to run all commands without password.
+```
+allows 'zabbix' user to run all commands without password.
  zabbix ALL=NOPASSWD: ALL
-# allows 'zabbix' user to restart apache without password.
+allows 'zabbix' user to restart apache without password.
  zabbix ALL=NOPASSWD: /etc/init.d/apache restart
 
-# allows 'zabbix' user to run all commands without password.
+allows 'zabbix' user to run all commands without password.
  zabbix ALL=NOPASSWD: ALL
-# allows 'zabbix' user to restart apache without password.
+allows 'zabbix' user to restart apache without password.
  zabbix ALL=NOPASSWD: /etc/init.d/apache restart
- 
-
+```
 备注：在某些情况下，zabbix需要sudo才能执行命令，请先在/etc/sudoer开启requiretty.具体的方法，请百度或者google.
 
 使用多种接口执行远程命令
