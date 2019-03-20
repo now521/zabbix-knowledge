@@ -35,4 +35,5 @@ Cacti比较着重于直观数据的监控，易于生成图形，用来监控网
 
 cacti偏重于网络流量，系统负载方面的监控。而 nagios偏重于系统服务方面的监控，你可以在被监控的机器上写自己的程序(shell,c 或 perl都可以) 。nagios则通过这些脚本来对服务进行监控。nagios可以和短信发送机配合用来监控规模较大的网站。  
 安装方法链接：https://blog.csdn.net/shedong1011/article/details/48354837  
+snmp协议详解：https://www.cnblogs.com/zhoading/p/8888915.html  
 https://blog.csdn.net/allen_a/article/details/50719296
