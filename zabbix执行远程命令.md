@@ -71,25 +71,25 @@ allows 'zabbix' user to restart apache without password.
 如果目标系统支持多种接口：zabbix agent、IPMI、远程命令（默认），请看如下一些实例
 示例1
 
-通过zabbix检测到的一些问题，然后自动重启windows
+通过zabbix检测到的一些问题，然后自动重启windows  
 
-参数	                       描述
-Operation type        	Remote command
-Type	                  Custom script
-Command	         c:\windows\system32\shutdown.exe -r -
+参数	                       描述  
+Operation type        	Remote command  
+Type	                  Custom script  
+Command	         c:\windows\system32\shutdown.exe -r -  
 示例2
 
-使用IPMI重启服务器
+使用IPMI重启服务器  
 
-参数	                描述
-Operation type	   Remote command
-Type	                 IPMI
-Command	             reset on
-示例三
+参数	                描述  
+Operation type	   Remote command  
+Type	                 IPMI  
+Command	             reset on  
+示例三  
 
-使用IPMI关机
+使用IPMI关机  
 
-参数	                   描述
-Operation type	    Remote command
-Type                  	IPMI
-Command	              power off
+参数	                   描述  
+Operation type	    Remote command  
+Type                  	IPMI  
+Command	              power off  
