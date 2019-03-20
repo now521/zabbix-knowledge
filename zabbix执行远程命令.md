@@ -51,12 +51,10 @@ Conditions选项卡定义了什么条件下，这个远程命令会被执行，�
 
 ## 访问权限
 确保你的zabbix用户有执行权限，如果某些命令需要root权限，那么请使用sudo
-
+```
 #visudo
-
 #visudo
 编辑sudoer文件，zabbix用户便可以执行Apache restart命令了
-```
 allows 'zabbix' user to run all commands without password.
  zabbix ALL=NOPASSWD: ALL
 allows 'zabbix' user to restart apache without password.
