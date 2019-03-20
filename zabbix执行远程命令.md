@@ -74,22 +74,14 @@ allows 'zabbix' user to restart apache without password.
 通过zabbix检测到的一些问题，然后自动重启windows  
 
 参数	                       描述  
-Operation type        	Remote command  
-Type	                  Custom script  
-Command	         c:\windows\system32\shutdown.exe -r -  
+![image93](https://github.com/now521/zabbix_picture/blob/master/93.png)
 示例2
 
 使用IPMI重启服务器  
 
 参数	                描述  
-Operation type	   Remote command  
-Type	                 IPMI  
-Command	             reset on  
+![image94](https://github.com/now521/zabbix_picture/blob/master/94.png)
 示例三  
 
 使用IPMI关机  
-
-参数	                   描述  
-Operation type	    Remote command  
-Type                  	IPMI  
-Command	              power off  
+![image95](https://github.com/now521/zabbix_picture/blob/master/95.png)
