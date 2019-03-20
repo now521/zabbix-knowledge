@@ -1,7 +1,4 @@
 # Cacti与Nagios进行网络监控的区别
-
-版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/allen_a/article/details/50719296
-
 Cacti与Nagios进行网络监控的区别
 
 Cacti和Nagios是现在使用比较多的网络监控软件了，对于这两款监控软件的区别，应该说是侧重点的不同。
@@ -37,4 +34,5 @@ Cacti比较着重于直观数据的监控，易于生成图形，用来监控网
 这两个工具最好是都装在linux系统上，cacti需要通过snmp协议收集被监控服务器的信息，nagios 则有自己的agent去收集信息。cacti虽然可以安装在windows上，其实那也是模拟了一个linux的类环境。
 
 cacti偏重于网络流量，系统负载方面的监控。而 nagios偏重于系统服务方面的监控，你可以在被监控的机器上写自己的程序(shell,c 或 perl都可以) 。nagios则通过这些脚本来对服务进行监控。nagios可以和短信发送机配合用来监控规模较大的网站。  
-安装方法链接：https://blog.csdn.net/shedong1011/article/details/48354837
+安装方法链接：https://blog.csdn.net/shedong1011/article/details/48354837  
+https://blog.csdn.net/allen_a/article/details/50719296
