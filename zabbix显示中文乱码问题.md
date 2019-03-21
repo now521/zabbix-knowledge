@@ -1,6 +1,7 @@
 # zabbix  
 zabbix显示中文乱码问题  
 当部署完zabbix然后显示中文会出现如下图  
+![image59](https://github.com/now521/zabbix_picture/blob/master/59.png)<br> 
 然后此时先去windows的文字目录如 C:\Windows\Fonts 随便托个字体到桌面  
 [![image40](https://github.com/now521/zabbix_picture/blob/master/40.png)](https://github.com/now521/zabbix_picture/blob/master/abc.TTF)<br/> 
 然后转到Linux  
