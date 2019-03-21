@@ -430,8 +430,8 @@ ss -tnul
 ![image57](https://github.com/now521/zabbix_picture/blob/master/57.png)<br>
 ![image58](https://github.com/now521/zabbix_picture/blob/master/58.png)<br>
 ### 19 添加监控项<br>
-![image59](https://github.com/now521/zabbix_picture/blob/master/59.png)<br>
 ![image60](https://github.com/now521/zabbix_picture/blob/master/60.png)<br>
 ![image61](https://github.com/now521/zabbix_picture/blob/master/61.png)<br>
 ![image62](https://github.com/now521/zabbix_picture/blob/master/62.png)<br>
+![image59](https://github.com/now521/zabbix_picture/blob/master/59.png)<br>
 ![image63](https://github.com/now521/zabbix_picture/blob/master/63.png)<br>
