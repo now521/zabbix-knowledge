@@ -192,8 +192,10 @@ yum install curl-devel -y
 yum install -y libssh2-devel
 ```
 以上是在编译的过程中可能会报错的信息及解决方法，当然也可能还有其它报错这里没列举出来，有问题找度娘，没毛病！<br>
-编译成功会出现************************************************************            Now run 'make install'                       **                                                         **            Thank you for using Zabbix!                  **              <http://www.zabbix.com>                    ************************************************************
+编译成功会出现  
 ```
+************************************************************            Now run 'make install'                       **                                                         **            Thank you for using Zabbix!                  **              <http://www.zabbix.com>                    ************************************************************
+
 make install
 ```
 ### 5 修改配置文件zabbix_server.conf
