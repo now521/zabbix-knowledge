@@ -150,6 +150,7 @@ Replaced:
 执行命令
 ```
 rpm -qa | grep mariadb
+rpm -qa | grep mariadb|xargs rpm -e --nodeps
 ```
 列出所有被安装的mariadb rpm 包；
 执行命令
