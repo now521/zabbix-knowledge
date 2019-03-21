@@ -81,7 +81,7 @@ MariaDB [(none)]>
 
 ```
 
-安装mariadb后显示的也是 MariaDB [(none)]> ，可能看起来有点不习惯。下面是第二种方法。
+安装mariadb后显示的也是 MariaDB [(none)]> ，可能看起来有点不习惯。下面是第二种方法。  
 ###2、方法二：官网下载安装mysql-server
 ```
 wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
