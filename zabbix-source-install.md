@@ -111,7 +111,9 @@ export PATH=$JAVA_HOME/bin:/usr/local/mysql/bin:$PATH
 ```
 ## 安装zabbix
 ### 1、获取zabbix安装包<br>
-#https://sourceforge.net/projects/zabbix/files/latest/download?source=files#由于更新原因，现在最新的版本已经不是4.0.4。有些命令在粘贴复制的时候需要自己手动改版本号#解压<br>
+https://sourceforge.net/projects/zabbix/files/latest/download?source=files  
+由于更新原因，现在最新的版本已经不是4.0.4。有些命令在粘贴复制的时候需要自己手动改版本号  
+解压<br>
 ```
 tar -zxvf zabbix-4.0.4.tar.gz
 ```
