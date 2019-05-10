@@ -3,7 +3,7 @@
 最近在学习Zabbix，发现安装zabbix需要的yum源在官方库里只有centos7以上的，centos6以下的已经没有了，所以centos6只能通过源码包来安装，以下是源码包安装zabbix的步骤说明<br>
 ## MySQL5.7的安装配置<br>
 ### 第一步：下载mysql<br>
-在Linux终端使用wget命令下载网络资源：wget http://mirrors.sohu.com/mysql/MySQL-5.7/mysql-5.7.17-linux-glibc2.5-x86_64.tar.gz（也可在windows中下载后传输到Linux）<br>
+在Linux终端使用wget命令下载网络资源：wget http://mirrors.sohu.com/mysql/MySQL-5.7/mysql-5.7.17-linux-glibc2.5-x86_64.tar.gz （也可在windows中下载后传输到Linux）<br>
 ### 第二步：解压文件<br>
 由于我是在我本机software目录中下载的文件，为了方便管理首先将此文件移动到/usr/local 目录下<br>
 ```
